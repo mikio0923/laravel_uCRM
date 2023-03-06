@@ -155,7 +155,10 @@ return [
 
     'attributes' => [
         'title' => '件名',
-        'content' => '内容'
+        'content' => '内容',
+        'price' => '値段',
+        'memo' => 'メモ',
+        'name' => '名前'
     ],
 
 ];
