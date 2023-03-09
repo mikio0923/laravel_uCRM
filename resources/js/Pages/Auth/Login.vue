@@ -11,6 +11,7 @@ import { Head, Link, useForm } from '@inertiajs/vue3';
 defineProps({
     canResetPassword: Boolean,
     status: String,
+    errors: Object
 });
 
 const form = useForm({
@@ -31,7 +32,7 @@ const submit = () => {
 
         <Head title="Log in" />
 
-        <BreezeValidationErrors class="mb-4" />
+        <BreezeValidationErrors class="mb-4" :errors="errors" />
 
         <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
             {{ status }}

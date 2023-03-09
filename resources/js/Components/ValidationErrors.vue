@@ -4,7 +4,7 @@ import { computed } from 'vue';
 const props = defineProps({
     errors: Object
 })
-// const hasErrors = computed(() => Object.keys(props.errors).length > 0);
+const hasErrors = computed(() => Object.keys(props.errors).length > 0);
 </script>
 
 <template>
