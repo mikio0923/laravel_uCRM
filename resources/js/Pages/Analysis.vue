@@ -5,7 +5,6 @@ import { reactive, onMounted } from 'vue';
 import { getToday } from '@/common'
 import Chart from '@/Components/Chart.vue'
 
-
 onMounted(() => {
     form.startDate = getToday()
     form.endDate = getToday()
@@ -62,8 +61,8 @@ const getData = async () => {
                                 class="mt-4 flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">分析する</button>
                         </form>
 
-                        <div v-show="props.data">
-                            <BarChart :chartData="barData" />
+                        <div v-show="data.data">
+                            <Chart :data="data" />
                         </div>
 
                         <div v-show="data.data" class="lg:w-2/3 w-full mx-auto overflow-auto">
